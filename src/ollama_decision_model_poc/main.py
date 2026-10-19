@@ -1,3 +1,4 @@
+import os
 import statistics
 import time
 
@@ -5,6 +6,9 @@ from dotenv import load_dotenv
 from typesafe_sdk import Choice, Noul, Score, TypeSafeClient
 
 load_dotenv()
+
+WARMUP_RUNS = int(os.getenv("WARMUP_RUNS", "1"))
+BENCHMARK_RUNS = int(os.getenv("BENCHMARK_RUNS", "20"))
 
 def build_questions():
     return {
