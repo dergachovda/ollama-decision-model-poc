@@ -4,10 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "python-dotenv>=1.2.4",
+    "typesafe-sdk>=0.7.5",
+]
 
 [project.scripts]
-ollama-decision-model-poc = "ollama_decision_model_poc:main"
+app = "ollama_decision_model_poc.main:main"
 
 [build-system]
 requires = ["uv_build>=0.12.13,<0.13.0"]

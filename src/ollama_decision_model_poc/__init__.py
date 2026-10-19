@@ -1,2 +1,3 @@
-def main() -> None:
-    print("Hello from ollama-decision-model-poc!")
+from ollama_decision_model_poc.main import main
+
+__all__ = ["main"]
